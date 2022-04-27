@@ -1,14 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
 
 // Font-family
 $heading: "Raleway", sans-serif;
 $body: "Raleway", sans-serif;
 
 // Title Color
-$title-color: #212538;
+$title-color: #040e3b;
 
 // Essential Colors
-$base-color: #1CACF3;
+$gradient-one: radial-gradient(
+    108.3% 186.75% at -4.62% 9.78%,
+    #f9636b 0%,
+    #b6246e 100%
+);
+.text-gradient {
+    background: $gradient-one;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+$base-color: #F45E6C;
 $accent-color: #120f29;
 
 $body-color: rgb(77, 70, 70);
@@ -19,11 +33,11 @@ $body-bg: #fff;
 
 $white: #fff;
 
-$theme-one: #F23674;
-$theme-two: #AE23F4;
-$theme-three: #FFA03A;
-$theme-four: #15DE9B;
-$theme-five: #7212F1;
+$theme-one: #f23674;
+$theme-two: #ae23f4;
+$theme-three: #ffa03a;
+$theme-four: #15de9b;
+$theme-five: #7212f1;
 
 // color variable for Bootstrap
 $primary: #7367f0;

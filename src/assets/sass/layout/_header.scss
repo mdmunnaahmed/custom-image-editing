@@ -1,8 +1,18 @@
 // Header Section Starts Here
-
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+    @extend %transition;
+    &.sticky {
+        background: $white;
+        box-shadow: 0 3px 25px 3px rgba($base-color, 0.15);
+    }
+}
 .header-bottom {
     width: 100%;
-    padding: 20px 0;
+    padding: 18px 0;
     @include breakpoint(max-lg) {
         padding: 15px 0;
     }
@@ -79,12 +89,11 @@
         a {
             display: block;
             padding: 4px 15px;
-            font-size: 15px;
             font-weight: 600;
-            text-transform: uppercase;
             font-family: $heading;
-            color: $body-color;
+            color: darken($body-color, 20%);
             position: relative;
+            font-size: 17px;
         }
     }
     .btn-close {

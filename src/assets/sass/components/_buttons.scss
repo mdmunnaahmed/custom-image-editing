@@ -2,7 +2,7 @@
 .cmn--btn {
     padding: 11px 35px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     outline: none !important;
     @extend %transition;
     border-radius: 5px;
@@ -27,7 +27,21 @@
         font-size: 13px;
     }
 }
-
+.cmn--btn {
+    background: $gradient-one;
+    color: $white;
+    i {
+        @extend %transition;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    &:hover {
+        color: $white;
+        i {
+            transform: translateX(5px);
+        }
+    }
+}
 $colors: "primary" $primary, "secondary" $secondary, "success" $success,
     "danger" $danger, "warning" $warning, "info" $info, "light" $light,
     "dark" $dark, "base" $base-color;
