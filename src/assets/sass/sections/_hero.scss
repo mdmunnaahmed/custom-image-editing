@@ -1,0 +1,19 @@
+.banner-section {
+    padding: 200px 0;
+}
+
+.banner-content {
+    max-width: 650px;
+    .subtitle {
+        font-size: 24px;
+        font-family: "Kalam";
+        color: $theme-one;
+        margin-bottom: 10px;
+    }
+    .title {
+        margin-bottom: 25px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
