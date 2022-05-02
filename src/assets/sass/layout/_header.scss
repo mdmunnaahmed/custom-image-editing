@@ -13,8 +13,8 @@
 .header-bottom {
     width: 100%;
     padding: 18px 0;
-    @include breakpoint(max-lg) {
-        padding: 15px 0;
+    @include breakpoint(max-xxl) {
+        padding: 10px 0;
     }
 }
 .header-bottom-area {
@@ -94,6 +94,9 @@
             color: darken($body-color, 20%);
             position: relative;
             font-size: 17px;
+            @include breakpoint(max-lg) {
+                font-size: 15px;
+            }
         }
     }
     .btn-close {

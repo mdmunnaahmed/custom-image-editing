@@ -1,0 +1,78 @@
+// Section Header
+.section-header {
+    margin-bottom: 50px;
+    .subtitle {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-family: "Kalam";
+        color: $gradient-one;
+        @include breakpoint(max-md) {
+            font-size: 20px;
+        }
+    }
+    .title {
+        margin-bottom: 20px;
+    }
+    .text {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        @include breakpoint(max-md) {
+            font-size: 18px;
+        }
+    }
+}
+.rtl {
+    direction: rtl;
+}
+// Section Header
+
+// About Section
+.section-thumb {
+    position: relative;
+    z-index: 1;
+    .shape1 {
+        position: absolute;
+        right: -150px;
+        top: -50px;
+        z-index: -2;
+        max-width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.about-info-item {
+    @extend %flex;
+    align-items: center;
+    &:nth-of-type(3n + 1) {
+        .icon {
+            background: $theme-one;
+        }
+    }
+    &:nth-of-type(3n + 2) {
+        .icon {
+            background: $theme-two;
+        }
+    }
+    &:nth-of-type(3n + 3) {
+        .icon {
+            background: $theme-three;
+        }
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+        background: $theme-one;
+        display: grid;
+        place-items: center;
+        color: $white;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    .title {
+        margin-bottom: 0;
+        padding-left: 15px;
+    }
+}
+// About Section

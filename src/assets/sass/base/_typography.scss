@@ -24,7 +24,19 @@ h1 {
     font-size: clamp(36px, 5vw, 56px);
 }
 h2 {
-    font-size: clamp(30px, 5vw, 46px);
+    font-size: 52px;
+    @include breakpoint(max-xxl) {
+        font-size: 46px;
+    }
+    @include breakpoint(max-xl) {
+        font-size: 42px;
+    }
+    @include breakpoint(max-md) {
+        font-size: 36px;
+    }
+    @include breakpoint(max-sm) {
+        font-size: 32px;
+    }
 }
 
 h3 {
