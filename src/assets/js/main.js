@@ -69,7 +69,6 @@ $(".scrollToTop").on("click", function () {
     return false;
 });
 
-
 $(".testimonial-slider").slick({
     fade: false,
     slidesToShow: 3,
@@ -78,7 +77,7 @@ $(".testimonial-slider").slick({
     autoplay: true,
     pauseOnHover: true,
     centerMode: false,
-    dots: true,
+    dots: false,
     arrows: false,
     nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
     prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
@@ -110,7 +109,6 @@ $(".testimonial-slider").slick({
     ],
 });
 
-
 // Odometer Counter
 $(".counter__item, .dashboard__card__item").each(function () {
     $(this).isInViewport(function (status) {
@@ -128,23 +126,23 @@ $(".counter__item, .dashboard__card__item").each(function () {
 });
 
 //Faq
-$(".faq-item__title").on("click", function (e) {
-    var element = $(this).parent(".faq-item");
+$(".faq__header").on("click", function (e) {
+    var element = $(this).parent(".faq__item");
     if (element.hasClass("open")) {
         element.removeClass("open");
-        element.find(".faq-item__content").removeClass("open");
-        element.find(".faq-item__content").slideUp(300, "swing");
+        element.find(".faq__content").removeClass("open");
+        element.find(".faq__content").slideUp(300, "swing");
     } else {
         element.addClass("open");
-        element.children(".faq-item__content").slideDown(300, "swing");
+        element.children(".faq__content").slideDown(300, "swing");
         element
-            .siblings(".faq-item")
-            .children(".faq-item__content")
+            .siblings(".faq__item")
+            .children(".faq__content")
             .slideUp(300, "swing");
-        element.siblings(".faq-item").removeClass("open");
+        element.siblings(".faq__item").removeClass("open");
         element
-            .siblings(".faq-item")
-            .find(".faq-item__content")
+            .siblings(".faq__item")
+            .find(".faq__content")
             .slideUp(300, "swing");
     }
 });
