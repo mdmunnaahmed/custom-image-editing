@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Section Header
 .section-header {
 	margin-bottom: 50px;
@@ -326,3 +327,214 @@ footer {
 	}
 }
 // Footer Section 
+=======
+// Section Header
+.section-header {
+	margin-bottom: 50px;
+	.subtitle {
+		margin-bottom: 10px;
+		font-size: 24px;
+		font-family: "Kalam";
+		color: $gradient-one;
+		@include breakpoint(max-md) {
+			font-size: 20px;
+		}
+	}
+	.title {
+		margin-bottom: 20px;
+	}
+	.text {
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 15px;
+		@include breakpoint(max-md) {
+			font-size: 18px;
+		}
+	}
+}
+.rtl {
+	direction: rtl;
+}
+// Section Header
+
+// About Section
+.section-thumb {
+	position: relative;
+	z-index: 1;
+	.shape1 {
+		position: absolute;
+		right: -150px;
+		top: -50px;
+		z-index: -2;
+		max-width: 100%;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.about-info-item {
+	@extend %flex;
+	align-items: center;
+	&:nth-of-type(3n + 1) {
+		.icon {
+			background: $theme-one;
+		}
+	}
+	&:nth-of-type(3n + 2) {
+		.icon {
+			background: $theme-two;
+		}
+	}
+	&:nth-of-type(3n + 3) {
+		.icon {
+			background: $theme-three;
+		}
+	}
+	.icon {
+		width: 40px;
+		height: 40px;
+		background: $theme-one;
+		display: grid;
+		place-items: center;
+		color: $white;
+		border-radius: 5px;
+		font-size: 18px;
+	}
+	.title {
+		margin-bottom: 0;
+		padding-left: 15px;
+	}
+}
+// About Section
+
+// Service Section
+.service-item {
+	text-align: center;
+	padding: 40px 30px;
+	background: rgba($theme-one, 0.2);
+	border-radius: 12px;
+	@extend %transition;
+	height: 100%;
+	position: relative;
+	.read-more {
+		color: $theme-one;
+	}
+	&:hover {
+		transform: translateY(-7px);
+	}
+	&__thumb {
+		margin-bottom: 20px;
+		img {
+			width: 180px;
+			height: 180px;
+			object-fit: contain;
+		}
+	}
+	&__content {
+		.title {
+			max-width: 150px;
+			margin: 0 auto 18px;
+		}
+		.read-more {
+			margin-top: 25px;
+		}
+	}
+	.badge {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		background: rgba($theme-one, 0.15);
+		border: 1px solid $theme-one;
+		color: $theme-one;
+	}
+	@include breakpoint(max-xxl) {
+		@include breakpoint(xl) {
+			padding: 35px 25px;
+		}
+		.service-item__thumb {
+			margin-bottom: 10px;
+		}
+		.service-item__content {
+			.title {
+				font-size: 20px;
+			}
+			.read-more {
+				margin-top: 15px;
+			}
+		}
+	}
+}
+div[class*="col"] {
+	&:nth-of-type(4n + 2) {
+		.service-item {
+			background: rgba($theme-two, 0.2);
+			.read-more {
+				color: $theme-two;
+			}
+			.badge {
+				background: rgba($theme-two, 0.15);
+				border: 1px solid $theme-two;
+				color: $theme-two;
+			}
+		}
+	}
+	&:nth-of-type(4n + 3) {
+		.service-item {
+			background: rgba($theme-three, 0.2);
+			.read-more {
+				color: $theme-three;
+			}
+			.badge {
+				background: rgba($theme-three, 0.15);
+				border: 1px solid $theme-three;
+				color: $theme-three;
+			}
+		}
+	}
+	&:nth-of-type(4n + 4) {
+		.service-item {
+			background: rgba($theme-four, 0.2);
+			.read-more {
+				color: $theme-four;
+			}
+			.badge {
+				background: rgba($theme-four, 0.15);
+				border: 1px solid $theme-four;
+				color: $theme-four;
+			}
+		}
+	}
+}
+// Service Section
+
+// Contact Section
+.info-item {
+	border-radius: 10px;
+	border: 1px solid $base-color;
+	height: 100%;
+	padding: 25px 20px;
+	@extend %flex;
+}
+
+.info-item .icon {
+	width: 40px;
+	height: 40px;
+	font-size: 32px;
+	color: $base-color;
+}
+.info-item .content {
+	width: calc(100% - 40px);
+	padding-left: 20px;
+}
+
+.info-item .content .title {
+	margin-bottom: 10px;
+}
+
+.info-item .content a {
+	word-break: break-all;
+	display: block;
+}
+
+// Contact Section
+>>>>>>> 5825fd3e849216e7cd4e132b31d68eec1adc184c
