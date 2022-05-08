@@ -192,7 +192,7 @@ ul {
     padding-bottom: clamp(25px, 6vw, 50px);
 }
 
-.list.list-column, .pagination, .header-bottom-area, .menu, .about-info-item {
+.list.list-column, .pagination, .header-bottom-area, .menu, .about-info-item, .info-item {
     display: flex;
     flex-wrap: wrap;
 }
@@ -387,6 +387,7 @@ h6 {
     outline: none !important;
     border-radius: 5px;
     z-index: 1;
+    box-shadow: none !important;
 }
 
 .btn.btn--lg,
@@ -1722,6 +1723,34 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item .badge {
     background: rgba(21, 222, 155, 0.15);
     border: 1px solid #15de9b;
     color: #15de9b;
+}
+
+.info-item {
+    border-radius: 10px;
+    border: 1px solid #F45E6C;
+    height: 100%;
+    padding: 25px 20px;
+}
+
+.info-item .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    color: #F45E6C;
+}
+
+.info-item .content {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+}
+
+.info-item .content .title {
+    margin-bottom: 10px;
+}
+
+.info-item .content a {
+    word-break: break-all;
+    display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

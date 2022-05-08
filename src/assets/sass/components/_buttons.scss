@@ -7,6 +7,7 @@
     @extend %transition;
     border-radius: 5px;
     z-index: 1;
+    box-shadow: none !important;
     &.btn--lg {
         padding: 12px 35px !important;
         font-size: 18px;
