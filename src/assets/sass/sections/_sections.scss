@@ -1,333 +1,3 @@
-<<<<<<< HEAD
-// Section Header
-.section-header {
-	margin-bottom: 50px;
-	.subtitle {
-		margin-bottom: 10px;
-		font-size: 24px;
-		font-family: "Kalam";
-		color: $gradient-one;
-		@include breakpoint(max-md) {
-			font-size: 20px;
-		}
-	}
-	.title {
-		margin-bottom: 20px;
-	}
-	.text {
-		font-size: 20px;
-		font-weight: 500;
-		margin-bottom: 15px;
-		@include breakpoint(max-md) {
-			font-size: 18px;
-		}
-	}
-}
-.rtl {
-	direction: rtl;
-}
-// Section Header
-
-// About Section
-.section-thumb {
-	position: relative;
-	z-index: 1;
-	.shape1 {
-		position: absolute;
-		right: -150px;
-		top: -50px;
-		z-index: -2;
-		max-width: 100%;
-		img {
-			max-width: 100%;
-		}
-	}
-}
-.about-info-item {
-	@extend %flex;
-	align-items: center;
-	&:nth-of-type(3n + 1) {
-		.icon {
-			background: $theme-one;
-		}
-	}
-	&:nth-of-type(3n + 2) {
-		.icon {
-			background: $theme-two;
-		}
-	}
-	&:nth-of-type(3n + 3) {
-		.icon {
-			background: $theme-three;
-		}
-	}
-	.icon {
-		width: 40px;
-		height: 40px;
-		background: $theme-one;
-		display: grid;
-		place-items: center;
-		color: $white;
-		border-radius: 5px;
-		font-size: 18px;
-	}
-	.title {
-		margin-bottom: 0;
-		padding-left: 15px;
-	}
-}
-// About Section
-
-// Service Section
-.service-item {
-	text-align: center;
-	padding: 40px 30px;
-	background: rgba($theme-one, 0.2);
-	border-radius: 12px;
-	@extend %transition;
-    height: 100%;
-	.read-more {
-		color: $theme-one;
-	}
-	&:hover {
-		transform: translateY(-7px);
-	}
-	&__thumb {
-		margin-bottom: 20px;
-		img {
-			width: 180px;
-			height: 180px;
-			object-fit: contain;
-		}
-	}
-	&__content {
-		.title {
-			max-width: 150px;
-			margin: 0 auto 18px;
-		}
-		.read-more {
-			margin-top: 25px;
-		}
-	}
-	@include breakpoint(max-xxl) {
-		@include breakpoint(xl) {
-			padding: 35px 25px;
-		}
-		.service-item__thumb {
-			margin-bottom: 10px;
-		}
-		.service-item__content {
-            .title {
-                font-size: 20px;
-            }
-			.read-more {
-				margin-top: 15px;
-			}
-		}
-	}
-}
-div[class*="col"] {
-	&:nth-of-type(4n + 2) {
-		.service-item {
-			background: rgba($theme-two, 0.2);
-			.read-more {
-				color: $theme-two;
-			}
-		}
-	}
-	&:nth-of-type(4n + 3) {
-		.service-item {
-			background: rgba($theme-three, 0.2);
-			.read-more {
-				color: $theme-three;
-			}
-		}
-	}
-	&:nth-of-type(4n + 4) {
-		.service-item {
-			background: rgba($theme-four, 0.2);
-			.read-more {
-				color: $theme-four;
-			}
-		}
-	}
-}
-// Service Section
-
-// Faq Section 
-.faq__wrapper {
-	.faq__item {
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-		border: 3px solid rgba($base-color, .0);
-	}
-	.faq__header {
-		padding: 25px;
-		position: relative;
-		cursor: pointer;
-		border-radius: 10px;
-		box-shadow: 0px 0px 30px 0px rgba($base-color, .2);
-		.faq__title {
-			line-height: 1;
-		}
-		.faq__icon {
-			position: absolute;
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			right: 25px;
-			background: rgba($base-color, 0.1);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			@include transition;
-			
-		}
-	}
-	.faq__content {
-		padding: 20px;
-		display: none;
-	}
-	.open {
-		border: 3px solid $base-color;
-		border-radius: 10px;
-		.faq__header {
-			border: 0px;
-			box-shadow: 0px !important;
-		}
-		.faq__icon {
-			transform: rotate(90deg);
-		}
-		
-	}
-	.active {
-		.faq__content {
-			display: block;
-		}
-	}
-}
-// Faq Section
-
-// Client Section 
-.client-section {
-	.swiper-slide {
-		padding: 7px 10px;
-		padding-top: 60px;
-		border-radius: 10px;
-	}
-	.testimonial-item {
-		box-shadow: 2px 5px 15px rgba($dark, .11);
-		padding: 40px 30px;
-		text-align: center;
-		border-radius: 10px;
-		.testimonial-thumb {
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-			object-fit: cover;
-			overflow: hidden;
-			-webkit-transform: translateY(-100px);
-			transform: translateY(-100px);
-			margin: 0 auto -60px;
-			img {
-				width: 100%;
-			}
-			border: 4px solid $base-color;
-		}
-		.content-header {
-			position: relative;
-			i {
-				position: absolute;
-				font-size: 36px;
-				right: 0;
-				top: 0;
-				opacity: .3;
-			}
-			.name {
-				margin-bottom: 0px;
-				line-height: 1;
-			}
-			.designation {
-				color: $theme-three;
-				margin-bottom: 10px;
-				font-size: 14px;
-			}
-		}
-		.slick-dots {
-			display: none;
-		}
-		.content-body {
-			p {
-				font-size: 15px;
-			}
-		}
-	}
-
-}
-// Client Section 
-
-// Footer Section 
-.footer-top {
-	border-bottom: 1px solid rgba($white, .2);
-	padding: 70px 0;
-	.footer-logo {
-		max-width: 150px;
-		margin: 0 auto 30px;
-		a {
-			img {
-				width: 100%;
-			}
-		}
-	}
-	.quick-links {
-		li {
-		    padding: 6px 0;
-			a {
-				color: #ffffffff;
-				padding: 0px 15px;
-				border-left: 1px solid rgba($white, .2);
-				&:hover {
-					color: $base-color;
-				}
-			}
-			&:last-child {
-                a {
-                    border-right: 1px solid rgba($white, .2);
-                }
-            }
-		}
-	}
-	.social__media {
-		margin-bottom: 30px;
-		li {
-			padding: 0 7.5px;
-			 a {
-				 width: 40px;
-				 height: 40px;
-				 border-radius: 50%;
-				 display: flex;
-				 justify-content: center;
-				 align-items: center;
-				 background: $gradient-one;
-				 color: $white;
-			 }
-		}
-	}
-}
-footer {
-	background: radial-gradient(circle, rgba($color:$title-color, $alpha:.8) -5%, $title-color 40%);
-}
-.footer-bottom {
-	.text--white {
-		color: $white;
-		a {
-			color: $base-color;
-		}
-	}
-}
-// Footer Section 
-=======
 // Section Header
 .section-header {
 	margin-bottom: 50px;
@@ -415,7 +85,6 @@ footer {
 	border-radius: 12px;
 	@extend %transition;
 	height: 100%;
-	position: relative;
 	.read-more {
 		color: $theme-one;
 	}
@@ -438,14 +107,6 @@ footer {
 		.read-more {
 			margin-top: 25px;
 		}
-	}
-	.badge {
-		position: absolute;
-		right: 10px;
-		top: 10px;
-		background: rgba($theme-one, 0.15);
-		border: 1px solid $theme-one;
-		color: $theme-one;
 	}
 	@include breakpoint(max-xxl) {
 		@include breakpoint(xl) {
@@ -471,22 +132,12 @@ div[class*="col"] {
 			.read-more {
 				color: $theme-two;
 			}
-			.badge {
-				background: rgba($theme-two, 0.15);
-				border: 1px solid $theme-two;
-				color: $theme-two;
-			}
 		}
 	}
 	&:nth-of-type(4n + 3) {
 		.service-item {
 			background: rgba($theme-three, 0.2);
 			.read-more {
-				color: $theme-three;
-			}
-			.badge {
-				background: rgba($theme-three, 0.15);
-				border: 1px solid $theme-three;
 				color: $theme-three;
 			}
 		}
@@ -497,44 +148,162 @@ div[class*="col"] {
 			.read-more {
 				color: $theme-four;
 			}
-			.badge {
-				background: rgba($theme-four, 0.15);
-				border: 1px solid $theme-four;
-				color: $theme-four;
-			}
 		}
 	}
 }
 // Service Section
 
-// Contact Section
-.info-item {
+// Faq Section
+.faq__wrapper {
+	.faq__item {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		border: 3px solid rgba($base-color, 0);
+		@extend %transition;
+	}
+	.faq__header {
+		padding: 20px 25px;
+		position: relative;
+		cursor: pointer;
+		border-radius: 10px;
+		box-shadow: 0px 3px 30px 0px rgba($base-color, 0.2);
+		.faq__title {
+			padding-right: 25px;
+		}
+		.faq__icon {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			right: 25px;
+			background: rgba($base-color, 0.1);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include transition;
+		}
+	}
+	.faq__content {
+		padding: 20px;
+		display: none;
+	}
+	.open {
+		border: 3px solid $base-color;
+		border-radius: 10px;
+		.faq__header {
+			border: 0px;
+			box-shadow: 0px !important;
+		}
+		.faq__icon {
+			transform: rotate(90deg);
+		}
+	}
+	.active {
+		.faq__content {
+			display: block;
+		}
+	}
+}
+// Faq Section
+
+// Client Section
+.rating {
+	&.coloured {
+		color: $warning;
+	}
+}
+.client-section {
+	background-image: linear-gradient(135deg, rgba($theme-one, .1) 0%, rgba($theme-five, .1) 100%);
+	.single-slide {
+		padding: 7px 12px 25px;
+		border-radius: 10px;
+	}
+}
+.bg-image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0; 
+	width: 100%;
+	opacity: .08;
+}
+.testimonial-item {
+	box-shadow: 0px 5px 15px rgba($dark, 0.12);
+	padding: 40px 30px;
 	border-radius: 10px;
-	border: 1px solid $base-color;
-	height: 100%;
-	padding: 25px 20px;
-	@extend %flex;
+	z-index: 1;
+	position: relative;
+	&::before {
+		@extend %position-set;
+		background: rgba(242, 54, 116, 0.1);
+		// background: $white;
+		border-radius: 10px;
+		z-index: -1;
+	}
+	.testimonial-thumb {
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		object-fit: cover;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		border: 4px solid $base-color;
+	}
+	.content-header {
+		position: relative;
+		.name {
+			margin-bottom: 0px;
+		}
+		.designation {
+			color: $theme-three;
+			font-size: 14px;
+		}
+	}
+	.slick-dots {
+		display: none;
+	}
+	.content-body {
+		margin-top: 20px;
+		p {
+			font-size: 15px;
+		}
+	}
 }
 
-.info-item .icon {
-	width: 40px;
-	height: 40px;
-	font-size: 32px;
-	color: $base-color;
+.single-slide {
+	&:nth-of-type(4n + 1) {
+		.testimonial-item {
+			&::before {
+				background: rgba($theme-one, 0.1)
+			}
+		}
+	}
+	&:nth-of-type(4n + 2) {
+		.testimonial-item {
+			&::before {
+				background: rgba($theme-two, 0.1)
+			}
+		}
+	}
+	&:nth-of-type(4n + 3) {
+		.testimonial-item {
+			&::before {
+				background: rgba($theme-three, 0.1)
+			}
+		}
+	}
+	&:nth-of-type(4n + 4) {
+		.testimonial-item {
+			&::before {
+				background: rgba($theme-four, 0.1)
+			}
+		}
+	}
 }
-.info-item .content {
-	width: calc(100% - 40px);
-	padding-left: 20px;
-}
-
-.info-item .content .title {
-	margin-bottom: 10px;
-}
-
-.info-item .content a {
-	word-break: break-all;
-	display: block;
-}
-
-// Contact Section
->>>>>>> 5825fd3e849216e7cd4e132b31d68eec1adc184c
+// Client Section
