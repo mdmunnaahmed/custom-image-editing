@@ -1,12 +1,56 @@
 // Add badges class name and color through sass loop
-$colors: "primary" $primary, "secondary" $secondary, "success" $success,
-    "danger" $danger, "warning" $warning, "info" $info, "light" $light,
-    "dark" $dark, "base" $base-color;
+$colors: "primary" $primary, "secondary" $secondary, "success" $success, "danger" $danger, "warning" $warning,
+	"info" $info, "light" $light, "dark" $dark, "base" $base-color;
 
 @each $name, $color in $colors {
-    .badge--#{$name} {
-        background-color: rgba($color, 0.15);
-        border: 1px solid $color;
-        color: $color;
-    }
+	.badge--#{$name} {
+		background-color: rgba($color, 0.15);
+		border: 1px solid $color;
+		color: $color;
+	}
+}
+.badge {
+    border-radius: 15px;
+    padding-inline: 15px;
+}
+
+.badge--outline-base {
+	background-color: rgba($base-color, 0.15);
+	border: 1px solid $base-color;
+	color: $base-color;
+}
+.badge--outline-primary {
+	background-color: rgba($primary, 0.15);
+	border: 1px solid $primary;
+	color: $primary;
+}
+.badge--outline-secondary {
+	background-color: rgba($secondary, 0.15);
+	border: 1px solid $secondary;
+	color: $secondary;
+}
+.badge--outline-success {
+	background-color: rgba($success, 0.15);
+	border: 1px solid $success;
+	color: $success;
+}
+.badge--outline-danger {
+	background-color: rgba($danger, 0.15);
+	border: 1px solid $danger;
+	color: $danger;
+}
+.badge--outline-warning {
+	background-color: rgba($warning, 0.15);
+	border: 1px solid $warning;
+	color: $warning;
+}
+.badge--outline-info {
+	background-color: rgba($info, 0.15);
+	border: 1px solid $info;
+	color: $info;
+}
+.badge--outline-dark {
+	background-color: rgba($dark, 0.15);
+	border: 1px solid $dark;
+	color: $dark;
 }
