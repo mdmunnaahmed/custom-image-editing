@@ -8,21 +8,17 @@ $body: "Raleway", sans-serif;
 $title-color: #040e3b;
 
 // Essential Colors
-$gradient-one: radial-gradient(
-    108.3% 186.75% at -4.62% 9.78%,
-    #f9636b 0%,
-    #b6246e 100%
-);
+$gradient-one: radial-gradient(108.3% 186.75% at -4.62% 9.78%, #f9636b 0%, #b6246e 100%);
 .text-gradient {
-    background: $gradient-one;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
+	background: $gradient-one;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
 }
 
-$base-color: #F45E6C;
+$base-color: #f45e6c;
 $accent-color: #120f29;
 
 $body-color: rgb(77, 70, 70);

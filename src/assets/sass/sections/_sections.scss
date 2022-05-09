@@ -6,6 +6,13 @@
 		font-size: 24px;
 		font-family: "Kalam";
 		color: $gradient-one;
+		padding-inline: 25px;
+		&::before,
+		&::after {
+			content: " ** ";
+			left: 0;
+			top: 12px;
+		}
 		@include breakpoint(max-md) {
 			font-size: 20px;
 		}
@@ -85,6 +92,7 @@
 	border-radius: 12px;
 	@extend %transition;
 	height: 100%;
+	position: relative;
 	.read-more {
 		color: $theme-one;
 	}
@@ -107,6 +115,14 @@
 		.read-more {
 			margin-top: 25px;
 		}
+	}
+	.badge {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		background: rgba($theme-one, 0.15);
+		border: 1px solid $theme-one;
+		color: $theme-one;
 	}
 	@include breakpoint(max-xxl) {
 		@include breakpoint(xl) {
@@ -132,12 +148,22 @@ div[class*="col"] {
 			.read-more {
 				color: $theme-two;
 			}
+			.badge {
+				background: rgba($theme-two, 0.15);
+				border: 1px solid $theme-two;
+				color: $theme-two;
+			}
 		}
 	}
 	&:nth-of-type(4n + 3) {
 		.service-item {
 			background: rgba($theme-three, 0.2);
 			.read-more {
+				color: $theme-three;
+			}
+			.badge {
+				background: rgba($theme-three, 0.15);
+				border: 1px solid $theme-three;
 				color: $theme-three;
 			}
 		}
@@ -148,20 +174,23 @@ div[class*="col"] {
 			.read-more {
 				color: $theme-four;
 			}
+			.badge {
+				background: rgba($theme-four, 0.15);
+				border: 1px solid $theme-four;
+				color: $theme-four;
+			}
 		}
 	}
 }
 // Service Section
 
 // Faq Section
-.faq__wrapper {
-	.faq__item {
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-		border: 3px solid rgba($base-color, 0);
-		@extend %transition;
+.faq__item {
+	&:not(:last-child) {
+		margin-bottom: 16px;
 	}
+	border: 3px solid rgba($base-color, 0);
+	@extend %transition;
 	.faq__header {
 		padding: 20px 25px;
 		position: relative;
@@ -178,9 +207,7 @@ div[class*="col"] {
 			border-radius: 50%;
 			right: 25px;
 			background: rgba($base-color, 0.1);
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@extend %flex-center;
 			@include transition;
 		}
 	}
@@ -188,7 +215,7 @@ div[class*="col"] {
 		padding: 20px;
 		display: none;
 	}
-	.open {
+	&.open {
 		border: 3px solid $base-color;
 		border-radius: 10px;
 		.faq__header {
@@ -199,7 +226,7 @@ div[class*="col"] {
 			transform: rotate(90deg);
 		}
 	}
-	.active {
+	&.active {
 		.faq__content {
 			display: block;
 		}
@@ -214,10 +241,14 @@ div[class*="col"] {
 	}
 }
 .client-section {
-	background-image: linear-gradient(135deg, rgba($theme-one, .1) 0%, rgba($theme-five, .1) 100%);
+	background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
 	.single-slide {
 		padding: 7px 12px 25px;
 		border-radius: 10px;
+	}
+	.container {
+		position: relative;
+		z-index: 1;
 	}
 }
 .bg-image {
@@ -225,9 +256,9 @@ div[class*="col"] {
 	left: 0;
 	top: 0;
 	bottom: 0;
-	right: 0; 
+	right: 0;
 	width: 100%;
-	opacity: .08;
+	opacity: 0.08;
 }
 .testimonial-item {
 	box-shadow: 0px 5px 15px rgba($dark, 0.12);
@@ -280,30 +311,109 @@ div[class*="col"] {
 	&:nth-of-type(4n + 1) {
 		.testimonial-item {
 			&::before {
-				background: rgba($theme-one, 0.1)
+				background: rgba($theme-one, 0.1);
 			}
 		}
 	}
 	&:nth-of-type(4n + 2) {
 		.testimonial-item {
 			&::before {
-				background: rgba($theme-two, 0.1)
+				background: rgba($theme-two, 0.1);
 			}
 		}
 	}
 	&:nth-of-type(4n + 3) {
 		.testimonial-item {
 			&::before {
-				background: rgba($theme-three, 0.1)
+				background: rgba($theme-three, 0.1);
 			}
 		}
 	}
 	&:nth-of-type(4n + 4) {
 		.testimonial-item {
 			&::before {
-				background: rgba($theme-four, 0.1)
+				background: rgba($theme-four, 0.1);
 			}
 		}
 	}
 }
 // Client Section
+
+
+// Contact Section
+.contact-info-item {
+	padding: 30px;
+	background: rgba($theme-one, 0.1);
+	border-radius: 10px;
+	@extend %flex;
+	height: 100%;
+	.icon {
+		width: 75px;
+		height: 75px;
+		background: $theme-one;
+		display: grid;
+		place-items: center;
+		font-size: 26px;
+		color: $white;
+		border-radius: 7px;
+	}
+	.content {
+		width: calc(100% - 75px);
+		padding-left: 20px;
+		@include breakpoint(max-xl) {
+			@include breakpoint(lg) {
+				width: 100%;
+				padding-left: 0;
+				padding-top: 15px;
+			}
+			@include breakpoint(max-md) {
+				width: 100%;
+				padding-left: 0;
+				padding-top: 15px;
+			}
+		}
+		.title {
+			margin-bottom: 8px;
+		}
+	}
+	a {
+		display: block;
+	}
+}
+div[class*="col"] {
+	&:nth-of-type(3n + 2) {
+		.contact-info-item {
+			background: rgba($theme-two, 0.1);
+			.icon {
+				background: $theme-two;
+			}
+		}
+	}
+	&:nth-of-type(3n + 3) {
+		.contact-info-item {
+			background: rgba($theme-three, 0.1);
+			.icon {
+				background: $theme-three;
+			}
+		}
+	}
+}
+
+.map-wrapper {
+	position: relative;
+	&::before {
+		@extend %position-set;
+		background: $gradient-one;
+		left:auto;
+		right: -30px;
+		top: -30px;
+		right: -30px;
+		height: 70%;
+		width: 70%;
+	}
+	.map {
+		position: relative;
+		z-index: 1;
+	}
+}
+// Contact Section

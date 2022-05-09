@@ -1,74 +1,80 @@
 .banner-section {
-    padding: 260px 0 200px;
-    @include breakpoint(max-xxl) {
-        padding: 200px 0 150px;
-    }
-    @include breakpoint(max-xl) {
-        padding: 160px 0 100px;
-    }
-    @include breakpoint(max-lg) {
-        background-position: left center !important;
-        text-align: center;
-        padding: 130px 0 100px;
-        p {
-            margin: 0 auto;
-        }
-    }
+	padding: 260px 0 200px;
+	@include breakpoint(max-xxl) {
+		padding: 200px 0 150px;
+	}
+	@include breakpoint(max-xl) {
+		padding: 160px 0 100px;
+	}
+	@include breakpoint(max-lg) {
+		background-position: left center !important;
+		text-align: center;
+		padding: 130px 0 100px;
+		p {
+			margin: 0 auto;
+		}
+	}
 }
 
 .banner-content {
-    max-width: 650px;
-    @include breakpoint(max-lg) {
-        margin: 0 auto;
-    }
-    .subtitle {
-        font-size: 24px;
-        font-family: "Kalam";
-        color: $theme-one;
-        margin-bottom: 10px;
-    }
-    .title {
-        margin-bottom: 25px;
-        font-size: 62px;
-        @include breakpoint(max-xl) {
-            font-size: 56px;
-        }
-        @include breakpoint(max-lg) {
-            max-width: 850px;
-        }
-        @include breakpoint(max-md) {
-            font-size: 48px;
-        }
-        @include breakpoint(max-sm) {
-            font-size: 42px;
-        }
-        @include breakpoint(max-xs) {
-            font-size: 36px;
-        }
-    }
-    p {
-        font-size: 18px;
-        @include breakpoint(max-xxl) {
-            max-width: 500px;
-        }
-        @include breakpoint(max-xs) {
-            font-size: 17px;
-        }
-    }
-    .cmn--btn {
-        margin-top: 45px;
-        @include breakpoint(max-xxl) {
-            margin-top: 40px;
-        }
-        @include breakpoint(max-xs) {
-            margin-top: 30px;
-        }
-    }
+	max-width: 650px;
+	@include breakpoint(max-lg) {
+		margin: 0 auto;
+	}
+	.subtitle {
+		font-size: 24px;
+		font-family: "Kalam";
+		color: $theme-one;
+		margin-bottom: 10px;
+	}
+	.title {
+		margin-bottom: 25px;
+		font-size: 62px;
+		@include breakpoint(max-xl) {
+			font-size: 56px;
+		}
+		@include breakpoint(max-lg) {
+			max-width: 850px;
+		}
+		@include breakpoint(max-md) {
+			font-size: 48px;
+		}
+		@include breakpoint(max-sm) {
+			font-size: 42px;
+		}
+		@include breakpoint(max-xs) {
+			font-size: 36px;
+		}
+	}
+	p {
+		font-size: 18px;
+		@include breakpoint(max-xxl) {
+			max-width: 500px;
+		}
+		@include breakpoint(max-xs) {
+			font-size: 17px;
+		}
+	}
+	.cmn--btn {
+		margin-top: 45px;
+		@include breakpoint(max-xxl) {
+			margin-top: 40px;
+		}
+		@include breakpoint(max-xs) {
+			margin-top: 30px;
+		}
+	}
 }
 
 .banner-thumb {
-    max-width: 550px;
-    img {
-        width: 100%;
-    }
+	max-width: 550px;
+	img {
+		width: 100%;
+	}
+}
+
+// Inner Banner
+.inner-banner {
+	padding: 120px 0;
+	background: rgba($base-color, 0.1);
 }

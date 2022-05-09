@@ -9,10 +9,7 @@ body {
     line-height: 1.9;
     font-family: $body;
     background: $body-bg;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // min-height: 100vh;
+    word-break: break-all;
 }
 p {
     margin: 0;
