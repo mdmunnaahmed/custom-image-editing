@@ -6,7 +6,6 @@
 		font-size: 24px;
 		font-family: "Kalam";
 		color: $gradient-one;
-		padding-inline: 25px;
 		&::before,
 		&::after {
 			content: " ** ";
@@ -83,6 +82,101 @@
 	}
 }
 // About Section
+
+// How Section
+.how-section {
+	background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
+	.bg-image {
+		opacity: .15;
+		top: auto;
+	}
+}
+.how-item {
+	text-align: center;
+	padding: 30px;
+	border-radius: 35px;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 5px 25px 5px rgba($dark, 0.2);
+	margin-top: 20px;
+	&::before {
+		@extend %position-set;
+		background: $theme-one;
+		border-radius: 35px;
+		transform: skew(5deg) rotate(-5deg);
+		z-index: -1;
+		top: -10px;
+		height: calc(100% + 30px);
+		@include breakpoint(max-sm) {
+			transform: skew(4deg);
+		}
+	}
+	&::after {
+		@extend %position-set;
+		background: $white;
+		border-radius: 35px;
+		transform: skew(-5deg);
+		z-index: -1;
+	}
+	&__header {
+		.text {
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 1;
+			color: $dark;
+		}
+		.count {
+			line-height: 1;
+			color: $theme-one; 
+		}
+	}
+	.title {
+		margin-bottom: 15px;
+	}
+	.icon img {
+		width: 75px;
+		height: 75px;
+		object-fit: contain;
+		margin: 25px 0;
+	}
+}
+div[class*="col"] {
+	&:nth-of-type(3n + 2) {
+		.how-item {
+			&::before {
+				background: $theme-two;
+			}
+			&__header {
+				.count {
+					color: $theme-two;
+				}
+			}
+			.title {
+				&::before {
+					background: $theme-two;
+				}
+			}
+		}
+	}
+	&:nth-of-type(3n + 3) {
+		.how-item {
+			&::before {
+				background: $theme-four;
+			}
+			&__header {
+				.count {
+					color: $theme-four;
+				}
+			}
+			.title {
+				&::before {
+					background: $theme-four;
+				}
+			}
+		}
+	}
+}
+// How Section
 
 // Service Section
 .service-item {
@@ -339,7 +433,6 @@ div[class*="col"] {
 }
 // Client Section
 
-
 // Contact Section
 .contact-info-item {
 	padding: 30px;
@@ -404,7 +497,7 @@ div[class*="col"] {
 	&::before {
 		@extend %position-set;
 		background: $gradient-one;
-		left:auto;
+		left: auto;
 		right: -30px;
 		top: -30px;
 		right: -30px;

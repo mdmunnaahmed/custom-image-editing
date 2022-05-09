@@ -205,7 +205,7 @@ ul {
     justify-content: center;
 }
 
-.testimonial-item::before, .map-wrapper::before {
+.how-item::before, .how-item::after, .testimonial-item::before, .map-wrapper::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -1614,7 +1614,6 @@ footer {
     font-size: 24px;
     font-family: "Kalam";
     color: radial-gradient(108.3% 186.75% at -4.62% 9.78%, #f9636b 0%, #b6246e 100%);
-    padding-inline: 25px;
 }
 
 .section-header .subtitle::before, .section-header .subtitle::after {
@@ -1696,6 +1695,94 @@ footer {
 .about-info-item .title {
     margin-bottom: 0;
     padding-left: 15px;
+}
+
+.how-section {
+    background-image: linear-gradient(135deg, rgba(242, 54, 116, 0.1) 0%, rgba(114, 18, 241, 0.1) 100%);
+}
+
+.how-section .bg-image {
+    opacity: .15;
+    top: auto;
+}
+
+.how-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: 35px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 25px 5px rgba(8, 32, 50, 0.2);
+    margin-top: 20px;
+}
+
+.how-item::before {
+    background: #f23674;
+    border-radius: 35px;
+    transform: skew(5deg) rotate(-5deg);
+    z-index: -1;
+    top: -10px;
+    height: calc(100% + 30px);
+}
+
+@media (max-width: 575px) {
+    .how-item::before {
+        transform: skew(4deg);
+    }
+}
+
+.how-item::after {
+    background: #fff;
+    border-radius: 35px;
+    transform: skew(-5deg);
+    z-index: -1;
+}
+
+.how-item__header .text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    color: #082032;
+}
+
+.how-item__header .count {
+    line-height: 1;
+    color: #f23674;
+}
+
+.how-item .title {
+    margin-bottom: 15px;
+}
+
+.how-item .icon img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin: 25px 0;
+}
+
+div[class*="col"]:nth-of-type(3n + 2) .how-item::before {
+    background: #ae23f4;
+}
+
+div[class*="col"]:nth-of-type(3n + 2) .how-item__header .count {
+    color: #ae23f4;
+}
+
+div[class*="col"]:nth-of-type(3n + 2) .how-item .title::before {
+    background: #ae23f4;
+}
+
+div[class*="col"]:nth-of-type(3n + 3) .how-item::before {
+    background: #15de9b;
+}
+
+div[class*="col"]:nth-of-type(3n + 3) .how-item__header .count {
+    color: #15de9b;
+}
+
+div[class*="col"]:nth-of-type(3n + 3) .how-item .title::before {
+    background: #15de9b;
 }
 
 .service-item {
