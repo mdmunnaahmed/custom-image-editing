@@ -83,11 +83,78 @@
 }
 // About Section
 
+// Feature Section
+.feature-item {
+	@extend %flex;
+	@include breakpoint(xl) {
+		padding-inline: 10px;
+	}
+	&__icon {
+		position: relative;
+		z-index: 1;
+		&::before {
+			@extend %position-set;
+			width: 80px;
+			height: 80px;
+			left: -20px;
+			top: -20px;
+			background: rgba($theme-one, 0.2);
+			border-radius: 39% 61% 33% 67% / 58% 47% 53% 42%;
+			z-index: -1;
+			@include breakpoint(max-sm) {
+				left: 15px;
+			}
+		}
+		img {
+			max-width: 70px;
+		}
+	}
+	&__content {
+		width: calc(100% - 70px);
+		padding-left: 35px;
+		@include breakpoint(max-xl) {
+			padding-left: 20px;
+		}
+		@include breakpoint(max-sm) {
+			padding-left: 0px;
+			width: 100%;
+			padding-top: 15px;
+		}
+		.title {
+			margin-bottom: 10px;
+		}
+	}
+}
+div[class*="col"] {
+	&:nth-of-type(3n + 2) {
+		.feature-item {
+			@include breakpoint(lg) {
+				margin-top: 50px;
+			}
+			&__icon {
+				&::before {
+					background: rgba($theme-two, .2);
+				}
+			}
+		}
+	}
+	&:nth-of-type(3n + 3) {
+		.feature-item {
+			&__icon {
+				&::before {
+					background: rgba($theme-three, .2);
+				}
+			}
+		}
+	}
+}
+// Feature Section
+
 // How Section
 .how-section {
 	background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
 	.bg-image {
-		opacity: .15;
+		opacity: 0.15;
 		top: auto;
 	}
 }
@@ -107,6 +174,7 @@
 		z-index: -1;
 		top: -10px;
 		height: calc(100% + 30px);
+		@extend %transition;
 		@include breakpoint(max-sm) {
 			transform: skew(4deg);
 		}
@@ -127,7 +195,7 @@
 		}
 		.count {
 			line-height: 1;
-			color: $theme-one; 
+			color: $theme-one;
 		}
 	}
 	.title {
@@ -138,6 +206,11 @@
 		height: 75px;
 		object-fit: contain;
 		margin: 25px 0;
+	}
+	&:hover {
+		&::before {
+			transform: skew(5deg) rotate(-3deg);
+		}
 	}
 }
 div[class*="col"] {

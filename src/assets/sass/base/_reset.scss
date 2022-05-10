@@ -34,3 +34,10 @@ sup,
 a {
     display: inline-block;
 }
+
+
+@include breakpoint(max-sm) {
+    .container, .container-fluid {
+        max-width: 420px;
+    }
+}
