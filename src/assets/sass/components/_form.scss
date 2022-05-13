@@ -14,15 +14,20 @@
 	}
 	&.style--two {
 		border: 0;
-		background: rgba($base-color, .1);
+		background: rgba($base-color, 0.1);
 	}
 }
 textarea.form--control {
 	height: 130px;
 }
 .form--control[type="file"] {
-	line-height: 25px;
-	padding: 12px 25px;
+	line-height: 36px;
+	padding: 6px 25px;
+	padding-left: 10px;
+	&::-webkit-file-upload-button {
+		background-color: $base-color !important;
+		color: #fff !important;
+	}
 }
 
 ::-webkit-input-placeholder {
@@ -61,15 +66,13 @@ input:-webkit-autofill:focus {
 		left: 0;
 		visibility: hidden;
 		cursor: pointer;
-		&:checked {
-			~ label {
-				&::before {
-					border-width: 2px;
-					border-color: $primary !important;
-				}
-				&::after {
-					opacity: 1;
-				}
+		&:checked ~ label {
+			&::before {
+				border-width: 2px;
+				border-color: $primary !important;
+			}
+			&::after {
+				opacity: 1;
 			}
 		}
 	}
@@ -104,13 +107,9 @@ input:-webkit-autofill:focus {
 	padding-left: rem(25px);
 	input {
 		display: none;
-		&:checked {
-			~ label {
-				&::before {
-					content: "\f14a";
-					color: $base-color;
-				}
-			}
+		&:checked ~ label::before {
+			content: "\f14a";
+			color: $base-color;
 		}
 	}
 	label {

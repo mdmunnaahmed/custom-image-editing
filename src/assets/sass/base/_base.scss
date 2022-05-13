@@ -30,7 +30,12 @@ ul {
     left: 0;
     top: 0;
     z-index: -999;
+    @extend %transition;
     &.active {
         z-index: 111;
+    }
+    &.overlay-dark {
+        background-color: rgba($dark , .4);
+        z-index: 1111;
     }
 }

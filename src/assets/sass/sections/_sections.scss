@@ -84,6 +84,16 @@
 // About Section
 
 // Feature Section
+.feature-section {
+	.shape1 {
+		right: 50px;
+		top: 0;
+		opacity: 0.1;
+		animation: move-tb 15s ease-in infinite;
+		z-index: -1;
+		max-width: 100%;
+	}
+}
 .feature-item {
 	@extend %flex;
 	@include breakpoint(xl) {
@@ -133,7 +143,7 @@ div[class*="col"] {
 			}
 			&__icon {
 				&::before {
-					background: rgba($theme-two, .2);
+					background: rgba($theme-two, 0.2);
 				}
 			}
 		}
@@ -142,7 +152,7 @@ div[class*="col"] {
 		.feature-item {
 			&__icon {
 				&::before {
-					background: rgba($theme-three, .2);
+					background: rgba($theme-three, 0.2);
 				}
 			}
 		}
@@ -252,51 +262,103 @@ div[class*="col"] {
 // How Section
 
 // Service Section
+.shape {
+	position: absolute;
+}
+.service-section {
+	.shape1 {
+		left: 50px;
+		top: 80px;
+		opacity: 0.1;
+		animation: pulse 5s ease-in infinite;
+		z-index: -1;
+		max-width: 300px;
+	}
+}
 .service-item {
-	text-align: center;
-	padding: 40px 30px;
-	background: rgba($theme-one, 0.2);
+	padding: 30px;
 	border-radius: 12px;
 	@extend %transition;
-	height: 100%;
 	position: relative;
+	box-shadow: 0 10px 25px 5px rgba($base-color, 0.1);
+	overflow: hidden;
+	height: 100%;
+	background: $white;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 2px;
+		height: 50px;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		background: $base-color;
+		opacity: .7;
+	}
 	.read-more {
 		color: $theme-one;
 	}
 	&:hover {
 		transform: translateY(-7px);
+		.service-item__content {
+			&::before {
+				transform: scale(1.1);
+				opacity: .06;
+			}
+		}
 	}
 	&__thumb {
-		margin-bottom: 20px;
+		width: 120px;
+		height: 120px;
+		background-color: rgba($base-color, 0.1);
+		border-radius: 50%;
+		margin-bottom: 25px;
 		img {
-			width: 180px;
-			height: 180px;
+			max-width: 80%;
+			width: 100%;
+			height: 100%;
 			object-fit: contain;
 		}
 	}
 	&__content {
+	position: relative;	
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100px;
+		height: 100px;
+		background: url(../images/shape2.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		opacity: .0;
+		z-index: -1;
+		right: -70px;
+		bottom: -60px;
+		@extend %transition;
+	}
 		.title {
 			max-width: 150px;
-			margin: 0 auto 18px;
+			margin-bottom: 15px;
 		}
 		.read-more {
-			margin-top: 25px;
+			margin-top: 20px;
+			text-decoration: underline;
 		}
 	}
-	.badge {
+	.price {
 		position: absolute;
-		right: 10px;
-		top: 10px;
-		background: rgba($theme-one, 0.15);
-		border: 1px solid $theme-one;
+		right: 25px;
+		top: 15px;
 		color: $theme-one;
+		font-size: 22px;
 	}
 	@include breakpoint(max-xxl) {
 		@include breakpoint(xl) {
 			padding: 35px 25px;
 		}
 		.service-item__thumb {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 		.service-item__content {
 			.title {
@@ -311,39 +373,39 @@ div[class*="col"] {
 div[class*="col"] {
 	&:nth-of-type(4n + 2) {
 		.service-item {
-			background: rgba($theme-two, 0.2);
+			&__thumb {
+				background: rgba($theme-two, 0.2);
+			}
 			.read-more {
 				color: $theme-two;
 			}
-			.badge {
-				background: rgba($theme-two, 0.15);
-				border: 1px solid $theme-two;
+			.price {
 				color: $theme-two;
 			}
 		}
 	}
 	&:nth-of-type(4n + 3) {
 		.service-item {
-			background: rgba($theme-three, 0.2);
+			&__thumb {
+				background: rgba($theme-three, 0.2);
+			}
 			.read-more {
 				color: $theme-three;
 			}
-			.badge {
-				background: rgba($theme-three, 0.15);
-				border: 1px solid $theme-three;
+			.price {
 				color: $theme-three;
 			}
 		}
 	}
 	&:nth-of-type(4n + 4) {
 		.service-item {
-			background: rgba($theme-four, 0.2);
+			&__thumb {
+				background: rgba($theme-four, 0.2);
+			}
 			.read-more {
 				color: $theme-four;
 			}
-			.badge {
-				background: rgba($theme-four, 0.15);
-				border: 1px solid $theme-four;
+			.price {
 				color: $theme-four;
 			}
 		}
@@ -352,6 +414,22 @@ div[class*="col"] {
 // Service Section
 
 // Faq Section
+.faq-section {
+	.shape1 {
+		right: 150px;
+		top: 50px;
+		opacity: 0.2;
+		animation: move-tb 15s ease-in infinite;
+		z-index: -1;
+		max-width: 180px;
+		@include breakpoint(max-lg) {
+			right: 50px;
+		}
+		@include breakpoint(max-md) {
+			right: 50px;
+		}
+	}
+}
 .faq__item {
 	&:not(:last-child) {
 		margin-bottom: 16px;
@@ -436,7 +514,6 @@ div[class*="col"] {
 	&::before {
 		@extend %position-set;
 		background: rgba(242, 54, 116, 0.1);
-		// background: $white;
 		border-radius: 10px;
 		z-index: -1;
 	}
@@ -576,10 +653,198 @@ div[class*="col"] {
 		right: -30px;
 		height: 70%;
 		width: 70%;
+		@include breakpoint(max-sm) {
+			top: -15px;
+			right: -15px;
+		}
 	}
 	.map {
 		position: relative;
 		z-index: 1;
 	}
 }
+.video-player {
+	height: 300px;
+}
 // Contact Section
+
+// Service Details Section
+.service-details-thumb {
+	img {
+		border-radius: 15px;
+	}
+}
+.service-details-content {
+	margin-top: 30px;
+	.title {
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}
+	p {
+		margin-top: 15px;
+	}
+}
+.service-single-image {
+	object-fit: cover;
+	border-radius: 5px;
+}
+// Service Details Section
+
+// Subscription Section
+.subscription-wrapper {
+	max-width: 920px;
+	width: 100%;
+	padding: 120px 60px;
+	border-radius: 15px;
+	background: $white;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 25px 65px 25px rgba($dark, 0.12);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0.7);
+	@extend %transition;
+	.subs-close {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		font-size: 24px;
+		line-height: 1;
+		padding: 5px;
+		cursor: pointer;
+		z-index: 1111;
+	}
+	&.active {
+		z-index: 1111;
+		transform: scale(1) translate(-50%, -50%);
+		opacity: 1;
+		visibility: visible;
+	}
+	@include breakpoint(max-sm) {
+		padding: 140px 30px 60px;
+		text-align: center;
+	}
+	&::before {
+		position: absolute;
+		content: "";
+		background: url(../images/shape6.png);
+		background-repeat: repeat;
+		background-size: contain;
+		width: 250px;
+		height: 250px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		@include breakpoint(max-sm) {
+			width: 200px;
+			height: 200px;
+		}
+	}
+	.subs-inner {
+		max-width: 80%;
+		margin: 0 auto;
+		@include breakpoint(max-lg) {
+			max-width: 100%;
+		}
+	}
+	.title {
+		margin-bottom: 25px;
+	}
+
+	.shape1 {
+		max-width: 150px;
+		left: 0;
+		top: 30px;
+		@include breakpoint(max-lg) {
+			top: 0;
+			max-width: 100px;
+		}
+		@include breakpoint(max-sm) {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.shape2 {
+		max-width: 250px;
+		right: 0;
+		top: 30px;
+		@include breakpoint(max-lg) {
+			display: none;
+		}
+	}
+	.form--control {
+		@include breakpoint(max-sm) {
+			border-radius: 5px !important;
+		}
+	}
+	.btn {
+		@include breakpoint(max-sm) {
+			width: 100%;
+			margin-top: 10px;
+			border-radius: 5px !important;
+			height: 50px;
+		}
+	}
+}
+.cmn-icon-btn {
+	width: 65px;
+	height: 65px;
+	display: grid;
+	place-items: center;
+	color: $white !important;
+	font-size: 24px;
+	background: $theme-three;
+	box-shadow: 0 3px 15px 3px rgba($theme-three, 0.4);
+	border-radius: 50%;
+	position: fixed;
+	right: 25px;
+	bottom: 100px;
+	z-index: 1111;
+	@include breakpoint(max-sm) {
+		width: 50px;
+		height: 50px;
+		font-size: 20px;
+	}
+	img {
+		max-width: 100%;
+	}
+}
+// Subscription Section
+
+.scrollToTop {
+	width: 40px;
+	height: 40px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	color: #fff;
+	z-index: 9999;
+	bottom: 30px;
+	right: 30px;
+	font-size: 18px;
+	position: fixed;
+	-webkit-transform: translateY(150px);
+	transform: translateY(150px);
+	background: $base-color;
+	border-radius: 3px;
+}
+
+.scrollToTop:hover {
+	color: #fff;
+}
+
+.scrollToTop.active {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-animation: bounceInDown 2s;
+	animation: bounceInDown 2s;
+}

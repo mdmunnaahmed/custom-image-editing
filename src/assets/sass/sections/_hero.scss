@@ -75,6 +75,34 @@
 
 // Inner Banner
 .inner-banner {
-	padding: 120px 0;
+	padding: 160px 0 100px;
 	background: rgba($base-color, 0.1);
+	@include breakpoint(max-xl) {
+		padding: 140px 0 80px;
+	}
+	@include breakpoint(max-md) {
+		padding: 120px 0 60px;
+	}
+	@include breakpoint(max-xs) {
+		padding: 100px 0 45px;
+	}
+	.o-2 {
+		opacity: 0.2;
+	}
+	.bg-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+	}
+	.title {
+		color: $dark;
+		margin-bottom: 10px;
+		@include breakpoint(max-xs) {
+			margin-bottom: 0px;
+		}
+	}
+	.breadcrumb {
+		gap: 25px;
+	}
 }

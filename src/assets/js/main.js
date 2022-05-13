@@ -34,10 +34,10 @@ headerTrigger.on("click", function () {
 // Overlay Event
 var over = $(".overlay");
 over.on("click", function () {
-	$(".overlay").removeClass("overlay-color");
+	$(".overlay").removeClass("overlay-dark");
 	$(".overlay").removeClass("active");
 	$(".menu, .header-trigger").removeClass("active");
-	$(".header-top").removeClass("active");
+	$(".subscription-wrapper").removeClass("active");
 });
 
 // Sticky Menu
@@ -51,7 +51,7 @@ window.addEventListener("scroll", function () {
 // Scroll To Top
 var scrollTop = $(".scrollToTop");
 $(window).on("scroll", function () {
-	if ($(this).scrollTop() < 500) {
+	if ($(this).scrollTop() < 300) {
 		scrollTop.removeClass("active");
 	} else {
 		scrollTop.addClass("active");
@@ -145,4 +145,14 @@ $(".btn-close, .overlay").on("click", function () {
 $(".video-button").magnificPopup({
 	type: "iframe",
 	// other options
+});
+
+$(".subs-btn").on("click", function () {
+	$(".subscription-wrapper").toggleClass("active");
+	$(".overlay").addClass("overlay-dark");
+});
+
+$(".subs-close, .overlay").on("click", function () {
+	$(".overlay").removeClass("overlay-dark");
+	$(".subscription-wrapper").removeClass("active");
 });

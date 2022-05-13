@@ -1,6 +1,7 @@
 <!-- meta tags and other links -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,8 @@
     <!-- bootstrap 5  -->
     <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
     <!-- Icon Link  -->
-    <link rel="stylesheet" href="assets/css/all.min.css"> 
-    <link rel="stylesheet" href="assets/css/line-awesome.min.css"> 
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
     <link rel="stylesheet" href="assets/css/lib/animate.css">
 
     <!-- Plugin Link -->
@@ -20,9 +21,33 @@
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
     <!-- Overlay -->
     <div class="overlay"></div>
+    <a href="javascript::void()" class="scrollToTop"><i class="las la-chevron-up"></i></a>
+
+
+    <!-- Subscription Section -->
+    <div class="subscription-wrapper">
+        <div class="subs-close"><i class="las la-times"></i></div>
+        <img src="assets/images/shape4.png" alt="images" class="shape shape1">
+        <img src="assets/images/shape5.png" alt="images" class="shape shape2">
+        <div class="subs-inner">
+            <h3 class="title">Subscribe to Our Updates</h3>
+            <form action="">
+                <div class="input-group">
+                    <input type="text" class="form-control form--control" placeholder="Email Address">
+                    <button class="btn cmn--btn border-0 px-3 px-lg-4">Subscribe <i class="fas fa-paper-plane ms-3"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Subscription Section -->
+
+    <!-- Subscription Button -->
+    <a href="javascript:void(0)" class="subs-btn cmn-icon-btn"><i class="lab la-telegram-plane"></i></a>
+    <!-- Subscription Button -->
 <div class="header">
     <div class="container">
         <div class="header-bottom">
@@ -33,14 +58,14 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">Service Details</a>
+                        <a href="service-details.html">Service Details</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
                 </ul>
                 <div class="header-trigger-wrapper d-flex align-items-center gap-4">
-                    <a href="#0" class="cmn--btn btn--sm">Free Trial <i class="las la-plus"></i></a>
+                    <a href="trial.html" class="cmn--btn btn--sm">Free Trial <i class="las la-plus"></i></a>
                     <div class="header-trigger  d-lg-none">
                         <span></span>
                     </div>
@@ -51,12 +76,12 @@
 </div>
 <!-- inner hero section start -->
 <section class="inner-banner bg_img position-relative">
-  <img src="assets/images/bg.png" alt="" class="bg-image o-2">
+  <img src="assets/images/bg.png" alt="images" class="bg-image o-2">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7 col-xl-6 text-center">
-        <h2 class="title text-white">Contact Page</h2>
-        <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
+        <h2 class="title">Contact Page</h2>
+        <ul class="breadcrumb mb-0 d-flex flex-wrap align-items-center justify-content-center">
           <li><a href="index.html"><i class="las la-home"></i> Home</a></li>
           <li>Contact</li>
         </ul>
@@ -66,7 +91,7 @@
 </section>
 <!-- inner hero section end -->
 
-<section class="contact-section pt-120 pb-120">
+<section class="contact-section pt-120 pb-120 overflow-hidden">
     <div class="container">
         <div class="text-center">
             <h3 class="title mb-2">Let's get in touch</h3>
@@ -148,8 +173,8 @@
                     </form>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="map-wrapper h-100 mt-4" style="min-height: 350px;">
+            <div class="col-lg-6 ps-lg-4 ps-xxl-5">
+                <div class="map-wrapper h-100 mt-sm-4" style="min-height: 350px;">
                     <iframe class="map w-100 h-100" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d49067.532938302786!2d90.5750520337422!3d23.926250743959354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1651979424519!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
