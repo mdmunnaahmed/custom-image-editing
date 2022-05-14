@@ -95,43 +95,34 @@
 	}
 }
 .feature-item {
-	@extend %flex;
-	@include breakpoint(xl) {
-		padding-inline: 10px;
+	background: $white;
+	box-shadow: 0 3px 25px 3px rgba($base-color, 0.12);
+	padding: 60px 40px;
+	border-radius: 50px;
+	text-align: center;
+	@include breakpoint(max-xxl) {
+		padding: 45px 40px;
+	}
+	@include breakpoint(max-xl) {
+		@include breakpoint(lg) {
+			padding: 40px 30px;
+		}
 	}
 	&__icon {
 		position: relative;
 		z-index: 1;
-		&::before {
-			@extend %position-set;
-			width: 80px;
-			height: 80px;
-			left: -20px;
-			top: -20px;
-			background: rgba($theme-one, 0.2);
-			border-radius: 39% 61% 33% 67% / 58% 47% 53% 42%;
-			z-index: -1;
-			@include breakpoint(max-sm) {
-				left: 15px;
-			}
-		}
+		height: 100px;
+		width: 100px;
+		margin: 0 auto 35px;
 		img {
-			max-width: 70px;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
 		}
 	}
 	&__content {
-		width: calc(100% - 70px);
-		padding-left: 35px;
-		@include breakpoint(max-xl) {
-			padding-left: 20px;
-		}
-		@include breakpoint(max-sm) {
-			padding-left: 0px;
-			width: 100%;
-			padding-top: 15px;
-		}
 		.title {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -139,21 +130,7 @@ div[class*="col"] {
 	&:nth-of-type(3n + 2) {
 		.feature-item {
 			@include breakpoint(lg) {
-				margin-top: 50px;
-			}
-			&__icon {
-				&::before {
-					background: rgba($theme-two, 0.2);
-				}
-			}
-		}
-	}
-	&:nth-of-type(3n + 3) {
-		.feature-item {
-			&__icon {
-				&::before {
-					background: rgba($theme-three, 0.2);
-				}
+				margin-top: 30px;
 			}
 		}
 	}
@@ -287,14 +264,14 @@ div[class*="col"] {
 	z-index: 1;
 	&::before {
 		position: absolute;
-		content: '';
+		content: "";
 		width: 2px;
 		height: 50px;
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
 		background: $base-color;
-		opacity: .7;
+		opacity: 0.7;
 	}
 	.read-more {
 		color: $theme-one;
@@ -304,7 +281,7 @@ div[class*="col"] {
 		.service-item__content {
 			&::before {
 				transform: scale(1.1);
-				opacity: .06;
+				opacity: 0.06;
 			}
 		}
 	}
@@ -322,21 +299,21 @@ div[class*="col"] {
 		}
 	}
 	&__content {
-	position: relative;	
-	&::before {
-		position: absolute;
-		content: '';
-		width: 100px;
-		height: 100px;
-		background: url(../images/shape2.png);
-		background-repeat: no-repeat;
-		background-size: contain;
-		opacity: .0;
-		z-index: -1;
-		right: -70px;
-		bottom: -60px;
-		@extend %transition;
-	}
+		position: relative;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 100px;
+			height: 100px;
+			background: url(../images/shape2.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			opacity: 0;
+			z-index: -1;
+			right: -70px;
+			bottom: -60px;
+			@extend %transition;
+		}
 		.title {
 			max-width: 150px;
 			margin-bottom: 15px;
