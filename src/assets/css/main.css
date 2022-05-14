@@ -229,7 +229,7 @@ a,
 img,
 .title,
 .name, .overlay, .btn,
-.cmn--btn, .cmn--btn i, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .how-item::before, .service-item, .service-item__content::before, .faq__item, .subscription-wrapper {
+.cmn--btn, .cmn--btn i, .custom--checkbox label::before, .header, .header-trigger span::after, .header-trigger span::before, .feature-item .shape-icon, .how-item::before, .service-item, .service-item__content::before, .faq__item, .subscription-wrapper {
     transition: all 0.3s;
 }
 
@@ -1772,14 +1772,28 @@ footer {
 .feature-item {
     background: #fff;
     box-shadow: 0 3px 25px 3px rgba(244, 94, 108, 0.12);
-    padding: 60px 40px;
+    padding: 50px 35px;
     border-radius: 50px;
     text-align: center;
+    position: relative;
+}
+
+.feature-item .shape-icon {
+    max-width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: .1;
+}
+
+.feature-item:hover .shape-icon {
+    opacity: .3;
+    max-width: 110px;
 }
 
 @media (max-width: 1399px) {
     .feature-item {
-        padding: 45px 40px;
+        padding: 45px 35px;
     }
 }
 
@@ -1792,8 +1806,8 @@ footer {
 .feature-item__icon {
     position: relative;
     z-index: 1;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     margin: 0 auto 35px;
 }
 
@@ -1804,13 +1818,20 @@ footer {
 }
 
 .feature-item__content .title {
+    padding-bottom: 15px;
     margin-bottom: 20px;
+    position: relative;
 }
 
-@media (min-width: 992px) {
-    div[class*="col"]:nth-of-type(3n + 2) .feature-item {
-        margin-top: 30px;
-    }
+.feature-item__content .title::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f45e6c;
+    width: 75px;
+    height: 4px;
 }
 
 .how-section {
