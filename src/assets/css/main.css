@@ -1711,6 +1711,25 @@ footer {
     direction: rtl;
 }
 
+.section-bg {
+    background-image: linear-gradient(135deg, rgba(242, 54, 116, 0.1) 0%, rgba(114, 18, 241, 0.1) 100%);
+}
+
+.section-bg .bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0.08;
+}
+
+.section-bg .container {
+    position: relative;
+    z-index: 1;
+}
+
 .section-thumb {
     position: relative;
     z-index: 1;
@@ -1783,11 +1802,11 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    opacity: .1;
+    opacity: 0.1;
 }
 
 .feature-item:hover .shape-icon {
-    opacity: .3;
+    opacity: 0.3;
     max-width: 110px;
 }
 
@@ -1825,22 +1844,13 @@ footer {
 
 .feature-item__content .title::before {
     position: absolute;
-    content: '';
+    content: "";
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     background: #f45e6c;
     width: 75px;
     height: 4px;
-}
-
-.how-section {
-    background-image: linear-gradient(135deg, rgba(242, 54, 116, 0.1) 0%, rgba(114, 18, 241, 0.1) 100%);
-}
-
-.how-section .bg-image {
-    opacity: 0.15;
-    top: auto;
 }
 
 .how-item {
@@ -2160,10 +2170,6 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item .price {
     color: #ff9f43;
 }
 
-.client-section {
-    background-image: linear-gradient(135deg, rgba(242, 54, 116, 0.1) 0%, rgba(114, 18, 241, 0.1) 100%);
-}
-
 .client-section .single-slide {
     padding: 7px 12px 25px;
     border-radius: 10px;
@@ -2172,16 +2178,6 @@ div[class*="col"]:nth-of-type(4n + 4) .service-item .price {
 .client-section .container {
     position: relative;
     z-index: 1;
-}
-
-.bg-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    opacity: 0.08;
 }
 
 .testimonial-item {

@@ -31,6 +31,22 @@
 .rtl {
 	direction: rtl;
 }
+.section-bg {
+	background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
+	.bg-image {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		opacity: 0.08;
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+}
 // Section Header
 
 // About Section
@@ -106,12 +122,12 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		opacity: .1;
+		opacity: 0.1;
 		@extend %transition;
 	}
 	&:hover {
 		.shape-icon {
-			opacity: .3;
+			opacity: 0.3;
 			max-width: 110px;
 		}
 	}
@@ -142,7 +158,7 @@
 			position: relative;
 			&::before {
 				position: absolute;
-				content: '';
+				content: "";
 				bottom: 0;
 				left: 50%;
 				transform: translateX(-50%);
@@ -157,11 +173,11 @@
 
 // How Section
 .how-section {
-	background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
-	.bg-image {
-		opacity: 0.15;
-		top: auto;
-	}
+	// background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
+	// .bg-image {
+	// 	opacity: 0.15;
+	// 	top: auto;
+	// }
 }
 .how-item {
 	text-align: center;
@@ -481,7 +497,7 @@ div[class*="col"] {
 	}
 }
 .client-section {
-	background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
+	// background-image: linear-gradient(135deg, rgba($theme-one, 0.1) 0%, rgba($theme-five, 0.1) 100%);
 	.single-slide {
 		padding: 7px 12px 25px;
 		border-radius: 10px;
@@ -491,15 +507,7 @@ div[class*="col"] {
 		z-index: 1;
 	}
 }
-.bg-image {
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	opacity: 0.08;
-}
+
 .testimonial-item {
 	box-shadow: 0px 5px 15px rgba($dark, 0.12);
 	padding: 40px 30px;
