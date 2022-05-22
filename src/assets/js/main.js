@@ -110,7 +110,7 @@ $(".testimonial-slider").slick({
 });
 
 // Odometer Counter
-$(".counter__item, .dashboard__card__item").each(function () {
+$(".counter-item").each(function () {
 	$(this).isInViewport(function (status) {
 		if (status === "entered") {
 			for (var i = 0; i < document.querySelectorAll(".odometer").length; i++) {
